@@ -34,6 +34,9 @@ class CodeWidget extends StatelessWidget {
                   if (value.length == 1) {
                     focusNode3.requestFocus();
                   }
+                  if (value.isEmpty) {
+                    focusNode1.requestFocus();
+                  }
                 },
                 focusNode: focusNode2,
               )),
@@ -42,6 +45,9 @@ class CodeWidget extends StatelessWidget {
                 onChanged: (value) {
                   if (value.length == 1) {
                     focusNode4.requestFocus();
+                  }
+                  if (value.isEmpty) {
+                    focusNode2.requestFocus();
                   }
                 },
                 focusNode: focusNode3,
@@ -52,6 +58,9 @@ class CodeWidget extends StatelessWidget {
                   if (value.length == 1) {
                     focusNode5.requestFocus();
                   }
+                  if (value.isEmpty) {
+                    focusNode3.requestFocus();
+                  }
                 },
                 focusNode: focusNode4,
               )),
@@ -61,12 +70,22 @@ class CodeWidget extends StatelessWidget {
                   if (value.length == 1) {
                     focusNode6.requestFocus();
                   }
+                  if (value.isEmpty) {
+                    focusNode4.requestFocus();
+                  }
                 },
                 focusNode: focusNode5,
               )),
           Expanded(
               child: CodeTextFormField(
-                onChanged: (value) {},
+                onChanged: (value) {
+                  if (value.length == 1) {
+                    focusNode6.unfocus();
+                  }
+                  if (value.isEmpty) {
+                    focusNode5.requestFocus();
+                  }
+                },
                 focusNode: focusNode6,
               )),
         ],
