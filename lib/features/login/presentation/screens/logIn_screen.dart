@@ -52,7 +52,6 @@ class LogInScreen extends StatelessWidget {
                       verticalSpace(2.h),
                       DefaultButton(
                         onPressed: () {
-                          FocusScope.of(context).requestFocus(FocusNode());
                           if(formKey.currentState!.validate()){
                             navigateTo(context, CodeScreen(phoneNum: '${sl<LogInCubit>().dropDownSelectedValue.dialCode}${phoneController.text}',));
                           }

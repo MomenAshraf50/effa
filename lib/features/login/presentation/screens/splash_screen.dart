@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:effa/core/utils/resources/app_strings.dart';
 import 'package:effa/core/utils/resources/constants_manager.dart';
 import 'package:effa/core/utils/resources/extensions_manager.dart';
 import 'package:effa/features/login/presentation/screens/logIn_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Timer(const Duration(seconds: 2), () {
-      navigateTo(context, const LogInScreen());
+      navigateAndFinish(context, const LogInScreen());
     });
   }
 
